@@ -1,0 +1,61 @@
+/* Reset some default styling */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the main menu */
+.menu {
+    list-style: none;
+    background-color: #333;
+    display: flex;
+}
+
+.menu li {
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Style the dropdown menu */
+.dropdown-parent {
+    position: relative;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    width: 200px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-parent:hover .sub-menu {
+    display: block;
+}
+
+.sub-menu li {
+    border-bottom: 1px solid #555;
+}
+
+.sub-menu li:last-child {
+    border-bottom: none;
+}
+
+.sub-menu li a {
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sub-menu li a:hover {
+    background-color: #555;
+}
