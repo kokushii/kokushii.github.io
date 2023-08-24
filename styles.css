@@ -4,62 +4,23 @@ body, ul {
     padding: 0;
 }
 
-/* Style the main menu */
-.menu {
+/* Style the bullet list */
+.bullet-list {
     list-style: none;
-    background-color: #333;
-    display: flex;
-    flex-direction: column; /* Display items vertically */
-    width: 200px;
-    height: 100vh; /* Full viewport height */
-}
-
-.menu li {
-    margin: 0;
     padding: 0;
+    width: 300px;
 }
 
-.menu li a {
-    display: block;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-}
-
-/* Style the dropdown menu */
-.dropdown-parent {
+.bullet-list li {
     position: relative;
+    padding: 5px 0;
+    margin-left: 20px; /* Create space for bullet points */
+    border-bottom: 1px solid #ddd;
 }
 
-.sub-menu {
-    display: none;
+.bullet-list li::before {
+    content: "•"; /* Bullet point character */
     position: absolute;
-    background-color: #444;
-    width: 200px;
-    top: 0; /* Position at the top */
-    left: 100%; /* Position on the right side of the parent */
-    transform: translateX(-100%); /* Move the menu to the left by its own width */
-}
-
-.dropdown-parent:hover .sub-menu {
-    display: block;
-}
-
-.sub-menu li {
-    border-bottom: 1px solid #555;
-}
-
-.sub-menu li:last-child {
-    border-bottom: none;
-}
-
-.sub-menu li a {
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    display: block;
-}
-
-.sub-menu li a:hover {
-    background-color: #555;
+    left: -15px; /* Adjust the position of the bullet point */
+    color: #333;
 }
